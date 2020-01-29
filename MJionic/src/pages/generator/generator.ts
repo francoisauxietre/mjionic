@@ -53,6 +53,7 @@ export class GeneratorPage {
           this.listDe.pop();
           this.listDe.push(num);
           this.listDe.push('Autre');
+          //ici il faudrait faire un pop up quand
         }
       }
     } else {

@@ -2,6 +2,8 @@ import { NgModule, ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
+//ajouter import pour angular material
+//import { MatButtonModule, MatCheckboxModule } from '@angular/material';
 
 import { AboutPage } from '../pages/about/about';
 import { ContactPage } from '../pages/contact/contact';
@@ -11,6 +13,7 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import {GeneratorPage} from "../pages/generator/generator";
+import {PostItPage} from "../pages/post-it/post-it";
 
 @NgModule({
   declarations: [
@@ -19,7 +22,8 @@ import {GeneratorPage} from "../pages/generator/generator";
     ContactPage,
     HomePage,
     TabsPage,
-    GeneratorPage
+    GeneratorPage,
+    PostItPage
   ],
   imports: [
     BrowserModule,
@@ -32,7 +36,8 @@ import {GeneratorPage} from "../pages/generator/generator";
     ContactPage,
     HomePage,
     TabsPage,
-    GeneratorPage
+    GeneratorPage,
+    PostItPage
 
   ],
   providers: [

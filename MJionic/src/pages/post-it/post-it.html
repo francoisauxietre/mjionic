@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>PostIt</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-reorder>
+    test
+    <div *ngFor="let postit of postIts">
+      <ion-item>{{postit}}test</ion-item>
+    </div>
+
+  </ion-reorder>
+</ion-content>
+
+<!--    <div cdkDropList class="example-list post-it-list" (cdkDropListDropped)="drop($event)">-->
+<!--      <button type="button" (click)="addPostButton()" class="btn btn-primary bouton-plus">+</button>-->
+<!--      <div *ngFor="let postIt of postIts" class="card" cdkDrag>-->
+<!--        <div class="card-header" >-->
+<!--          <span contenteditable="true" (input)="onTitleChange(postIt, $event.target.innerHTML)">{{postIt.title}}</span>-->
+<!--          <i class="material-icons close-post-it" (click)="removePostButton(postIt)">close</i>-->
+<!--        </div>-->
+<!--        <div class="card-body">-->
+<!--          &lt;!&ndash;<h5 class="card-title">{{postIt.title}}</h5>&ndash;&gt;-->
+<!--          <p class="card-text" contenteditable="true" (input)="onTextChange(postIt, $event.target.innerHTML)">{{postIt.text}}</p>-->
+<!--          &lt;!&ndash;<a href="#" class="btn btn-primary">Edit</a>&ndash;&gt;-->
+
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+
