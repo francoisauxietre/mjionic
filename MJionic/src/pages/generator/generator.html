@@ -13,11 +13,11 @@
 <ion-content padding>
   <div>
 
-    <ion-select [(ngModel)]="selectDe" name="selectDe" style="background-color: aqua">
+    taille du dé:<ion-select [(ngModel)]="selectDe" name="selectDe" style="background-color: aqua">
       <ion-option *ngFor="let de of listDe">{{de}}</ion-option>
     </ion-select>
     <button ion-button (click)="onSubmit()">Lancer</button>
-    <ion-input [(ngModel)]="nbDe" type="number" min="1"></ion-input>
+    nombre:<ion-input [(ngModel)]="nbDe" type="number" min="1"></ion-input>
 
 
   </div>
