@@ -20,6 +20,10 @@ ionic generate component login-form --change-detection=OnPush
 ionic generate directive ripple --skip-import
 ionic generate service api/user</code></pre>
 
+#Plugin qui sont cool
 
+<pre><code>https://ionicframework.com/docs/native/image-picker
+https://ionicframework.com/docs/native/music-controls
+https://ionicframework.com/docs/native/media</code></pre>
 
 
