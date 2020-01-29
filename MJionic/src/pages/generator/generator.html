@@ -12,14 +12,17 @@
 
 <ion-content padding>
   <div>
-    <ion-input id="dice_generator" name="nbDe" type="number" min="1" [(ngModel)]="nbDe" />D
-    <ion-select [(ngModel)]="selectDe" name="selectDe">
-      <option *ngFor="let de of listDe">{{de}}</option>
+
+    <ion-select [(ngModel)]="selectDe" name="selectDe" style="background-color: aqua">
+      <ion-option *ngFor="let de of listDe">{{de}}</ion-option>
     </ion-select>
     <button ion-button (click)="onSubmit()">Lancer</button>
+    <ion-input [(ngModel)]="nbDe" type="number" min="1"></ion-input>
+
+
   </div>
   <div>
-    <p id="list_values">{{listValue}}</p>
-    <p id="total">={{total}}</p>
+    <!--    <p id="list_values">{{listValue}}</p>-->
+    <!--    <p id="total">={{total}}</p>-->
   </div>
 </ion-content>
