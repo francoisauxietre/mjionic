@@ -1,0 +1,57 @@
+<div style="clear: both"></div>
+<div class="row">
+  <div class="ma_ligne_verticale">
+    <div class="card" (expand)="onExpandEntry($event,1)">
+        <button *ngIf="!this.change" type="button" class="btn btn-outline-primary"
+                (click)="entryInput.show = !entryInput.show"
+                [attr.aria-expanded]="!entryInput.show"
+                aria-controls="collapseExample"
+                style="min-height: 30px"
+        >
+        <span *ngIf="entryInput.header===''">New</span>
+          {{entryInput.header}}
+        </button>
+        <div *ngIf="!this.change">
+            {{entryInput.description}}
+        </div>
+        <input *ngIf="this.change" placeholder="titre" [(ngModel)]="entryInput.header">
+        <input *ngIf="this.change" placeholder="description" [(ngModel)]="entryInput.description">
+
+
+      <div [ngbCollapse]="entryInput.show">
+        <button *ngIf="!this.change" class="btn btn-primary" (click)="modify()">
+          Modify
+        </button>
+        <button *ngIf="this.change" class="btn btn-primary" (click)="validate()">
+          Validate
+        </button>
+        <button *ngIf="this.change" class="btn btn-primary" (click)="addSubTask()">
+          Add
+        </button>
+      </div>
+        <ion-button (click)="remove()">
+            <ion-icon name="close"></ion-icon>
+        </ion-button>
+      <div>
+
+        <div *ngIf="this.showTask">
+          <ul>
+            <li *ngFor="let task of subTasks">{{task.header}}
+              <input placeholder="Entrez la description" type="text" class="" id="name" required [(ngModel)]="task.description"/>
+              <ion-button (click)="removeTask(task)">
+                  <ion-icon name="close"></ion-icon>
+              </ion-button>
+
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!--    <div *ngIf="this.showTask">-->
+    <!--      <input placeholder="tasche" [(ngModel)]="entryInput.header">-->
+    <!--    </div>-->
+    <!--    <p>Hello {{ data.name }}!</p>-->
+  </div>
+  <div class="ma_colonne_droite"></div>
+  <div style="clear: both"></div>
+</div>
