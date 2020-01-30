@@ -7,14 +7,22 @@ import { IonicModule } from '@ionic/angular';
 import { HomePageRoutingModule } from './home-routing.module';
 
 import { HomePage } from './home.page';
+import {TimelinePageModule} from '../timeline/timeline.module';
+import {MatButtonToggleModule, MatToolbarModule} from '@angular/material';
+import {ElementTimelinePageModule} from '../element-timeline/element-timeline.module';
+
 
 @NgModule({
-  imports: [
-    CommonModule,
-    FormsModule,
-    IonicModule,
-    HomePageRoutingModule
-  ],
+    imports: [
+        CommonModule,
+        FormsModule,
+        IonicModule,
+        HomePageRoutingModule,
+        TimelinePageModule,
+        MatToolbarModule,
+        MatButtonToggleModule,
+        ElementTimelinePageModule
+    ],
   declarations: [HomePage]
 })
 export class HomePageModule {}
