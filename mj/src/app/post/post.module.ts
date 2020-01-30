@@ -9,12 +9,15 @@ import { PostPageRoutingModule } from './post-routing.module';
 import { PostPage } from './post.page';
 
 @NgModule({
-  imports: [
-    CommonModule,
-    FormsModule,
-    IonicModule,
-    PostPageRoutingModule
-  ],
-  declarations: [PostPage]
+    imports: [
+        CommonModule,
+        FormsModule,
+        IonicModule,
+        PostPageRoutingModule
+    ],
+    exports: [
+        PostPage
+    ],
+    declarations: [PostPage]
 })
 export class PostPageModule {}

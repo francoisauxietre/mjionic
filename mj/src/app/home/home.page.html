@@ -2,25 +2,27 @@
     <ion-grid>
         <!--  top-->
         <ion-row>
-          <ion-col class="eye">
-            <div>oeil</div>
-          </ion-col>
-          <ion-col class="timeLine">
-              <div><ion-button (click)="activateTimeLine()">TimeLine</ion-button></div>
-          </ion-col>
+            <ion-col class="eye">
+                <div>oeil</div>
+            </ion-col>
+            <ion-col class="timeLine">
+                <div>
+                    <ion-button (click)="activateTimeLine()">TimeLine</ion-button>
+                </div>
+            </ion-col>
             <ion-col class="parameter">
                 parameter
             </ion-col>
             <ion-col>
-               other
+                other
             </ion-col>
         </ion-row>
         <!--  milieu-->
         <ion-row class="bodyHome">
             <ion-col class="postit">
-                postit
+                <app-post></app-post>
             </ion-col>
-            <ion-col class="image">
+            <ion-col col-md class="image">
                 <div *ngIf="timeLineBoolean">
                     <section class="timeline">
                         <mat-toolbar>
@@ -34,7 +36,9 @@
                             </div>
                         </div>
                     </section>
-                    <ion-button (click)="desactivateTimeLine()"><ion-icon name="close"></ion-icon></ion-button>
+                    <ion-button (click)="desactivateTimeLine()">
+                        <ion-icon name="close"></ion-icon>
+                    </ion-button>
                 </div>
             </ion-col>
             <ion-col class="musique">
@@ -44,16 +48,77 @@
         <!--  bas -->
         <ion-row>
             <ion-col class="pnj">
-                personnage
+                <ion-list>
+
+                    <button ion-button color="primary">
+                        <ion-icon name="text"></ion-icon>
+                        Text
+                    </button>
+                    <button ion-button color="secondary">
+                        <ion-icon name="call"></ion-icon>
+                        Call
+                    </button>
+
+                    <button ion-button color="primary">
+                        <ion-icon name="mail"></ion-icon>
+                        Email
+                    </button>
+                    <button ion-button color="primary">
+                        <ion-icon name="close" (click)="removePnj()"></ion-icon>
+                    </button>
+                    <button ion-button color="primary">
+                        <ion-icon name="add" (click)="addPnj()"></ion-icon>
+                    </button>
+
+                </ion-list>
+                <ion-list>
+
+                    <button ion-button color="primary">
+                        <ion-icon name="text"></ion-icon>
+                        Text
+                    </button>
+                    <button ion-button color="secondary">
+                        <ion-icon name="call"></ion-icon>
+                        Call
+                    </button>
+
+                    <button ion-button color="primary">
+                        <ion-icon name="mail"></ion-icon>
+                        Email
+                    </button>
+                    <button ion-button color="primary">
+                        <ion-icon name="close" (click)="removePj()"></ion-icon>
+                    </button>
+                    <button ion-button color="primary">
+                        <ion-icon name="add" (click)="addPj()"></ion-icon>
+                    </button>
+
+                </ion-list>
             </ion-col>
-          <ion-col>
+            <ion-col>
 
-          </ion-col>
-          <ion-col >
+            </ion-col>
+            <ion-col>
 
-          </ion-col>
+            </ion-col>
             <ion-col class="dice">
-                dé
+                <section class="de">
+                    dé:
+                    <ion-input type="number" [(ngModel)]="val" id="input"></ion-input>
+                    nombre:
+                    <ion-input type="number" [(ngModel)]="nb" id="input1"></ion-input>
+                    <mat-toolbar>
+                        <mat-button-toggle (click)="addDice()">+</mat-button-toggle>
+                        <mat-button-toggle (click)="removeDice()">-</mat-button-toggle>
+                    </mat-toolbar>
+
+
+                    <div *ngFor="let de of deList; let i = index;">
+                        [{{de.deValue}}]:{{de.quantity}}
+                    </div>
+
+                </section>
+
             </ion-col>
         </ion-row>
     </ion-grid>

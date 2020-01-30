@@ -2,6 +2,7 @@ import {Component, Input, OnInit} from '@angular/core';
 import {log} from 'util';
 import {ElementTimeLine} from '../model/elementTimeline';
 import {TimelinePage} from '../timeline/timeline.page';
+import {HomePage} from '../home/home.page';
 
 
 class SubTask {
@@ -24,7 +25,7 @@ export class AppData {
 })
 export class ElementTimelinePage implements OnInit {
     @Input() entryInput: ElementTimeLine;
-    @Input() parent: TimelinePage;
+    @Input() parent: HomePage;
     public change: boolean;
     public subTasks: SubTask[] = [];
     public Ids: number[] = null;

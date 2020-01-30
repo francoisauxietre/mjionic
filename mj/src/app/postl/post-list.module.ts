@@ -7,11 +7,14 @@ import { IonicModule } from '@ionic/angular';
 import { PostListPage } from './post-list.page';
 
 @NgModule({
-  imports: [
-    CommonModule,
-    FormsModule,
-    IonicModule
-  ],
-  declarations: [PostListPage]
+    imports: [
+        CommonModule,
+        FormsModule,
+        IonicModule
+    ],
+    exports: [
+        PostListPage
+    ],
+    declarations: [PostListPage]
 })
 export class PostListPageModule {}

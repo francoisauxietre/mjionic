@@ -10,6 +10,8 @@ import { HomePage } from './home.page';
 import {TimelinePageModule} from '../timeline/timeline.module';
 import {MatButtonToggleModule, MatToolbarModule} from '@angular/material';
 import {ElementTimelinePageModule} from '../element-timeline/element-timeline.module';
+import {PostListPageModule} from '../postl/post-list.module';
+import {PostPageModule} from '../post/post.module';
 
 
 @NgModule({
@@ -21,7 +23,9 @@ import {ElementTimelinePageModule} from '../element-timeline/element-timeline.mo
         TimelinePageModule,
         MatToolbarModule,
         MatButtonToggleModule,
-        ElementTimelinePageModule
+        ElementTimelinePageModule,
+        PostListPageModule,
+        PostPageModule
     ],
   declarations: [HomePage]
 })
