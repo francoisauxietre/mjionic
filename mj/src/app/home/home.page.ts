@@ -19,9 +19,10 @@ export class HomePage implements OnInit {
     side = 'left';
     entries: ElementTimeLine[] = [];
     private deList: Dice [] = [];
-    private pnjList: [];
-    private pjList: [];
+    private pnjList: string [];
+    private pjList: string [];
     private pj: [];
+    private pnj: [];
     private de6: Dice;
     private de4: Dice;
     private de10: Dice;
@@ -29,12 +30,14 @@ export class HomePage implements OnInit {
     nb = 1;
     private sum: number;
     hidden: boolean;
+    musicBool: boolean;
 
 
     constructor() {
     }
 
     ngOnInit() {
+        this.musicBool = false;
         this.timeLineBoolean = false;
         this.de6 = new Dice();
         this.de6.deValue = 6;
@@ -80,7 +83,6 @@ export class HomePage implements OnInit {
     }
 
 
-
     removePnj() {
 
     }
@@ -90,12 +92,23 @@ export class HomePage implements OnInit {
     }
 
     addPj() {
-
+        console.log('' + this.pj);
+        this.pnjList.push('test');
+        // this.pnj;
     }
 
     addPnj() {
-
+        console.log('' + this.pnj);
+        this.pjList.push('test');
     }
 
+    activateMusic() {
+        console.log('musique');
+        if (this.musicBool) {
+            this.musicBool = false;
+        } else {
+            this.musicBool = true;
+        }
+    }
 }
 

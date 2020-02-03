@@ -13,6 +13,8 @@ import {ElementTimelinePageModule} from '../element-timeline/element-timeline.mo
 import {PostListPageModule} from '../postl/post-list.module';
 import {PostPageModule} from '../post/post.module';
 import {DiceComponent} from '../component/dice/dice.component';
+import {ModelFicheComponent} from '../component/model-fiche/model-fiche.component';
+import {MusicComponent} from '../component/music/music.component';
 
 
 @NgModule({
@@ -28,6 +30,6 @@ import {DiceComponent} from '../component/dice/dice.component';
         PostListPageModule,
         PostPageModule
     ],
-    declarations: [HomePage, DiceComponent]
+    declarations: [HomePage, DiceComponent, ModelFicheComponent, MusicComponent]
 })
 export class HomePageModule {}

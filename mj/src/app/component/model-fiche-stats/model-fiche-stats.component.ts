@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {CdkDragDrop, moveItemInArray} from '@angular/cdk/drag-drop';
+import {Component, OnInit} from '@angular/core';
+import {KeyType} from '../../model/KeyType';
 
 @Component({
   selector: 'app-model-fiche-stats',
@@ -7,8 +9,31 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ModelFicheStatsComponent implements OnInit {
 
-  constructor() { }
+ checked = true;
+  selected = 'string';
+  label = '';
 
-  ngOnInit() {}
+  keyTypes: KeyType[] = [];
 
+  ngOnInit() {
+  }
+
+  ajouter() {
+    if ( this.label !== '') {
+      const tmp: KeyType = new KeyType();
+      tmp.key = this.label;
+      tmp.type = this.selected;
+      this.keyTypes.push(tmp);
+    }
+  }
+
+  removePostButton(keyType: KeyType) {
+    this.keyTypes = this.keyTypes.filter((value) => {
+      return value !== keyType;
+    });
+  }
+
+  drop(event: CdkDragDrop<string[]>) {
+    moveItemInArray(this.keyTypes, event.previousIndex, event.currentIndex);
+  }
 }

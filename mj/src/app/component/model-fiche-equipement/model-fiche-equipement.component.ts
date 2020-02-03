@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {CdkDragDrop, moveItemInArray} from '@angular/cdk/drag-drop';
+import {KeyValue} from '../../model/KeyValue';
 
 @Component({
   selector: 'app-model-fiche-equipement',
@@ -7,8 +9,32 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ModelFicheEquipementComponent implements OnInit {
 
-  constructor() { }
+  checked = true;
+  desc = '';
+  label = '';
 
-  ngOnInit() {}
+  equipements: KeyValue[] = [];
+
+  ngOnInit() {
+  }
+
+  ajouter() {
+    if ( this.desc !== '' || this.label !== '' ) {
+      const tmp = new KeyValue();
+      tmp.key = this.label;
+      tmp.value = this.desc;
+      this.equipements.push(tmp);
+    }
+  }
+
+  removePostButton(equipement: KeyValue) {
+    this.equipements = this.equipements.filter((value) => {
+      return value !== equipement;
+    });
+  }
+
+  drop(event: CdkDragDrop<string[]>) {
+    moveItemInArray(this.equipements, event.previousIndex, event.currentIndex);
+  }
 
 }

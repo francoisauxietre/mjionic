@@ -1,3 +1,32 @@
-<p>
-  model-fiche-equipement works!
-</p>
+<mat-expansion-panel [disabled]="checked === false" [expanded]="checked === true">
+  <mat-expansion-panel-header>
+    <mat-panel-title>
+      Equipement
+    </mat-panel-title>
+    <mat-panel-description>
+      <mat-checkbox [(ngModel)]="checked"></mat-checkbox>
+    </mat-panel-description>
+  </mat-expansion-panel-header>
+  <section>
+    <form class="inventaire-form">
+      <mat-form-field class="example-full-width">
+        <input type="text" matInput placeholder="Champ" value="label" name="label" [(ngModel)]="label"/>
+      </mat-form-field>
+      <mat-form-field>
+        <input type="text" matInput placeholder="Description" value="desc" name="desc" [(ngModel)]="desc"/>
+      </mat-form-field>
+      <button mat-flat-button color="primary" (click)="ajouter()">ajouter</button>
+    </form>
+  </section>
+  <mat-divider></mat-divider>
+  <section>
+    <div cdkDropList (cdkDropListDropped)="drop($event)">
+      <mat-card cdkDrag *ngFor="let keyValue of equipements">
+        <span>{{keyValue.key}}</span><span>{{keyValue.value}}</span>
+        <mat-card-actions>
+          <button mat-button (click)="removePostButton(keyValue)">X</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </section>
+</mat-expansion-panel>
