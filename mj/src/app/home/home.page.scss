@@ -1,7 +1,14 @@
-.bodyHome {
-  height: 600px;
-  background-color: #123456;
+.top {
+  height: 10%;
 }
+.middle {
+  background-color: #123456;
+  height: 65%;
+}
+.bottom {
+  height: 25%;
+}
+
 .parameter{
   background-color: #0bb8cc;
 }
@@ -14,8 +21,10 @@
 }
 .dice{
   float: right;
-  width: 200px;
   background-color: #5f8886;
 }
 
+ion-grid.md.hydrated {
+  height: 100%;
+}
 

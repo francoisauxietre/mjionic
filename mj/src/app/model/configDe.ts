@@ -1,12 +1,12 @@
-import {De} from './De';
+import {Dice} from './Dice';
 
 export class ConfigDe {
-    config: De[];
+    config: Dice[];
 
-    public add(de: De) {
+    public add(de: Dice) {
         this.config.push(de);
     }
-    public remove(de: De) {
+    public remove(de: Dice) {
         this.config = this.config.filter(localDe => localDe !== de);
     }
 }

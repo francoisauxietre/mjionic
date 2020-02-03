@@ -12,6 +12,7 @@ import {MatButtonToggleModule, MatToolbarModule} from '@angular/material';
 import {ElementTimelinePageModule} from '../element-timeline/element-timeline.module';
 import {PostListPageModule} from '../postl/post-list.module';
 import {PostPageModule} from '../post/post.module';
+import {DiceComponent} from '../component/dice/dice.component';
 
 
 @NgModule({
@@ -27,6 +28,6 @@ import {PostPageModule} from '../post/post.module';
         PostListPageModule,
         PostPageModule
     ],
-  declarations: [HomePage]
+    declarations: [HomePage, DiceComponent]
 })
 export class HomePageModule {}

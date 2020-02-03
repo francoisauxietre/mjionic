@@ -1,7 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {ElementTimeLine} from '../model/elementTimeline';
-import {ConfigDe} from '../model/configDe';
-import {De} from '../model/De';
+import {Dice} from '../model/Dice';
 
 @Component({
     selector: 'app-home',
@@ -19,16 +18,17 @@ export class HomePage implements OnInit {
     size: 40;
     side = 'left';
     entries: ElementTimeLine[] = [];
-    private deList: De [] = [];
+    private deList: Dice [] = [];
     private pnjList: [];
     private pjList: [];
     private pj: [];
-    private de6: De;
-    private de4: De;
-    private de10: De;
-    val = 0;
-    nb = 0;
-    private newDe: De;
+    private de6: Dice;
+    private de4: Dice;
+    private de10: Dice;
+    val = 6;
+    nb = 1;
+    private sum: number;
+    hidden: boolean;
 
 
     constructor() {
@@ -36,15 +36,15 @@ export class HomePage implements OnInit {
 
     ngOnInit() {
         this.timeLineBoolean = false;
-        this.de6 = new De();
+        this.de6 = new Dice();
         this.de6.deValue = 6;
-        this.de6.quantity = 0;
-        this.de4 = new De();
+        this.de6.quantity = 2;
+        this.de4 = new Dice();
         this.de4.deValue = 4;
-        this.de4.quantity = 0;
-        this.de10 = new De();
+        this.de4.quantity = 2;
+        this.de10 = new Dice();
         this.de10.deValue = 10;
-        this.de10.quantity = 0;
+        this.de10.quantity = 1;
         this.deList.push(this.de6);
         this.deList.push(this.de4);
         this.deList.push(this.de10);
@@ -79,19 +79,6 @@ export class HomePage implements OnInit {
         });
     }
 
-    addDice() {
-        console.log('' + this.val);
-        if (this.val !== 0 && this.nb !== 0) {
-            this.newDe = new De();
-            this.newDe.deValue = this.val;
-            this.newDe.quantity = this.nb;
-            this.deList.push(this.newDe);
-        }
-    }
-
-    removeDice() {
-        this.deList.pop();
-    }
 
 
     removePnj() {
@@ -109,5 +96,6 @@ export class HomePage implements OnInit {
     addPnj() {
 
     }
+
 }
 

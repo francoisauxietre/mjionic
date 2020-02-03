@@ -1,9 +1,9 @@
+<ion-button (click)="addPostButton()">Add</ion-button>
 <ion-reorder-group (ionItemReorder)="doReorder($event)" disabled="false">
-  <ion-button (click)="addPostButton()">Add</ion-button>
-  <ion-item *ngFor="let post of postIts">
+  <ion-item *ngFor="let post of postIts" class="post-it">
     <ion-button (click)="removePostButton(post)">X</ion-button>
-    <ion-input placeholder="Enter Input"></ion-input>
+    <ion-input placeholder="title"></ion-input>
+    <ion-textarea placeholder="Enter more information here..."></ion-textarea>
     <ion-reorder slot="end"></ion-reorder>
   </ion-item>
 </ion-reorder-group>
-<ion-content></ion-content>

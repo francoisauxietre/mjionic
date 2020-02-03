@@ -1,0 +1,26 @@
+<section class="de">
+  <div class="form">
+    <div class="diceForm">
+      <ion-label>dé</ion-label>
+      <ion-input type="number" min="1" [(ngModel)]="val" id="input"></ion-input>
+    </div>
+    <div class="diceForm">
+      <ion-label>nombre</ion-label>
+      <ion-input type="number" min="1" [(ngModel)]="nb" id="input1"></ion-input>
+    </div>
+  </div>
+
+  <mat-toolbar>
+    <mat-button-toggle (click)="addDice()">+</mat-button-toggle>
+    <mat-button-toggle (click)="removeDice()">-</mat-button-toggle>
+    <mat-button-toggle (click)="launchDice()">Launch : {{this.sum}}</mat-button-toggle>
+  </mat-toolbar>
+  <div class="form">
+                        <span *ngFor="let de of deList; let i = index;">
+                             ( {{de.quantity}}x{{de.deValue}}: {{de.result}} )
+                        </span>
+  </div>
+
+
+
+</section>
