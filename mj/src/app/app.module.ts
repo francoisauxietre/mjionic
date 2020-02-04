@@ -10,6 +10,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import {ImagePicker} from '@ionic-native/image-picker/ngx';
+import {Camera} from '@ionic-native/camera/ngx';
+import { File } from '@ionic-native/file/ngx';
+import { Crop } from '@ionic-native/crop';
 
 
 @NgModule({
@@ -19,6 +23,9 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
   providers: [
     StatusBar,
     SplashScreen,
+      ImagePicker,
+      Camera,
+      File,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]

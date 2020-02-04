@@ -4,7 +4,11 @@ import {ElementTimeLine} from '../model/elementTimeline';
 import {TimelinePage} from '../timeline/timeline.page';
 import {HomePage} from '../home/home.page';
 
+//
+// Documentation Auxietre Francois composant Element Time Line
+// ce composant permet de créer un element unitaire qui sera utilisé par time line
 
+// sous taches utilisé pour la time line
 class SubTask {
     id: number;
     description: string;
@@ -12,22 +16,25 @@ class SubTask {
     show: boolean;
 }
 
+// la classe AppData permet de stocker les élements du titre et de description principaux
 export class AppData {
     id: number;
     title: string;
     text: string;
 }
 
+
+// element unitaire de la time line
 @Component({
     selector: 'app-element-timeline',
     templateUrl: './element-timeline.page.html',
     styleUrls: ['./element-timeline.page.scss'],
 })
 export class ElementTimelinePage implements OnInit {
-    @Input() entryInput: ElementTimeLine;
-    @Input() parent: HomePage;
-    public change: boolean;
-    public subTasks: SubTask[] = [];
+    @Input() entryInput: ElementTimeLine; // on recupere du parent cet element
+    @Input() parent: HomePage; // on recupere de home des composants
+    public change: boolean; // booléen pour affichage ou non dans le html
+    public subTasks: SubTask[] = []; // listes des sous- taches
     public Ids: number[] = null;
     public courantId = 0;
     public showTask: boolean;

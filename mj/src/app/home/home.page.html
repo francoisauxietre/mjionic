@@ -19,11 +19,23 @@
                     <ion-icon name="settings"></ion-icon>
                 </ion-button>
             </ion-col>
+            <ion-col size="1" class="parameter">
+                <ion-button>
+                    <ion-icon name="perso"></ion-icon>
+<!--                    <app-model-fiche></app-model-fiche>-->
+                </ion-button>
+            </ion-col>
+
+            <ion-col size="1" class="image">
+                <ion-button (click)="getImages()">
+                    <ion-icon name="image"></ion-icon>
+                </ion-button>
+            </ion-col>
             <ion-col size="3" class="other">
             </ion-col>
-            <ion-col size="4" class="other">
+            <ion-col size="" class="other">
                 <ion-button (click)="activateMusic()">
-                    <ion-icon name="musical-notes" ></ion-icon>
+                    <ion-icon name="musical-notes"></ion-icon>
                 </ion-button>
             </ion-col>
 
@@ -36,6 +48,11 @@
             </ion-col>
 
             <ion-col size="6" class="image">
+                <div class="images">
+                    <div class="one-image" *ngFor="let img of imageResponse">
+                        <img src="{{img}}" alt="" srcset="">
+                    </div>
+                </div>
                 <div *ngIf="timeLineBoolean">
                     <section class="timeline">
                         <mat-toolbar>
@@ -58,7 +75,7 @@
             </ion-col>
             <ion-col class="musique" style="z-index: -1;">
 
-<!--                <span *ngIf="musicBool"><app-music></app-music></span>-->
+                <!--                <span *ngIf="musicBool"><app-music></app-music></span>-->
             </ion-col>
         </ion-row>
         <!--  bas -->
@@ -67,7 +84,7 @@
                 <ion-list>
                     <div class="pnj">
                         <ion-input placeholder="Pj name" type="string" [(ngModel)]="pnj" id="input1"></ion-input>
-                        <ion-button  (click)="addPnj()" >Add</ion-button>
+                        <ion-button (click)="addPnj()">Add</ion-button>
                         <span *ngIf="pnj">
                             <ion-button color="primary">
                            {{pnj}}

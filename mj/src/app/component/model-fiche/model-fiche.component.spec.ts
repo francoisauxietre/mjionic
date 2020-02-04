@@ -1,6 +1,11 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { IonicModule } from '@ionic/angular';
 
+//
+// Documentation Auxietre Francois composant ModelFiche création Etienne
+// ce composant permet de gérer les pnj et les pj dans le jeu
+
+
 import { ModelFicheComponent } from './model-fiche.component';
 
 describe('ModelFicheComponent', () => {
