@@ -30,6 +30,9 @@ Lancer ionic:
 <pre><code>ionic serve</code></pre>
 
 #Plugin utilisés lors de cette application :
+File ionic : https://ionicframework.com/docs/native/file
+image Picker : https://ionicframework.com/docs/native/image-picker
+Musique Howler: https://www.npmjs.com/package/howler
 
 <pre><code>https://ionicframework.com/docs/native/image-picker
 https://ionicframework.com/docs/native/music-controls
