@@ -8,7 +8,7 @@ Un travail de CSS serait utile pour améliorer l'interface qui par manque de tem
 
 # Ce projet est en Anglais, mais les commentaires sont en francais.
 
-# Anyone can use this code in futur, just please ask me for commercial use.
+# Anyone can use this code for developing another app, please ask me for commercial use.
 
 Pour Installer ce projets plusieurs commandes ont été nécessaires:
 Liens vers les ressources utiles de ce projet 
