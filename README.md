@@ -17,7 +17,7 @@ Liens vers les ressources utiles de ce projet
 * Angular : https://angular.io/ (projet créer sous angular 8)
 * Cordova : https://cordova.apache.org/ (pour la portabilité sous IOS en angular)
 
-Ce projet m'a permis encore une fois d'apprendre à travailler à plusieurs, approfondir mes connaissance en angular, les methodes de travails dans la matière transverse OCI avec son approche centré utilisateur permet un développement plus proche des utilisateurs.
+Ce projet m'a permis encore une fois d'apprendre à travailler à plusieurs, approfondir mes connaissances en angular, les methodes de travails dans la matière transverse OCI, avec son approche centrés utilisateurs.
 https://fr.wikipedia.org/wiki/Conception_centr%C3%A9e_sur_l%27utilisateur
 
 installer ionic: #
